@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="w3-row ">
+    <div class="w3-third w3-card-4 w3-margin">
+        <div class="w3-container w3-green">
+            <h2>Новый пользователь</h2>
+        </div>
+
+        <div class="w3-container">
+            <label>Имя</label>
+            <input class="w3-input" type="text" id="name">
+            <label>Инн</label>
+            <input class="w3-input" type="text" id="inn">
+            <label>Email</label>
+            <input class="w3-input" type="text" id="email">
+            <label>Баланс</label>
+            <input class="w3-input" type="text" id="balance">            
+        </div>
+
+        <button class="w3-btn w3-block w3-green" id="btn">+ Добавить</button>
+    </div>
+    <div class="w3-third w3-card-4 w3-margin">
+        <div class="w3-container w3-green">
+            <h2>Перевод</h2>
+        </div>
+        <div class="w3-container" id="list">
+            <select class="w3-select" name="option" id="from">
+                <option value="" disabled selected>От кого</option>
+            </select>
+        <input class="w3-input" type="text" id="inns" placeholder="ИНН через запятую">
+        </div>
+        <div id="info">
+            <p id="info_name"></p>
+            <p id="info_inn"></p>
+            <p id="info_name"></p>
+            <p id="info_balance"></p>
+            <input class="w3-input" type="text" id="amount" placeholder="Сумма перевода" style="display:none"> 
+            <button class="w3-btn w3-block w3-green" id="btn1" style="display:none">Перевести</button>
+        </div>
+    </div>
+
+    <table class="w3-table w3-striped w3-bordered" id="table">
+        <tr>
+            <th>Имя</th>
+            <th>ИНН</th>
+            <th>Email</th>
+            <th>Баланс</th>
+        </tr>
+</div>
+
+{% endblock %}
